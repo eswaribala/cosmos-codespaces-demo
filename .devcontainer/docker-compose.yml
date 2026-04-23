@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/python:3.12
+    volumes:
+      - ..:/workspaces/${localWorkspaceFolderBasename}
+    command: sleep infinity
+    depends_on:
+      - cosmos
+    networks:
+      - appnet
+
+  cosmos:
+    image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:vnext-preview
+    ports:
+      - "8081:8081"
+    environment:
+      AZURE_COSMOS_EMULATOR_PARTITION_COUNT: "2"
+      AZURE_COSMOS_EMULATOR_ENABLE_DATA_PERSISTENCE: "true"
+      AZURE_COSMOS_EMULATOR_IP_ADDRESS_OVERRIDE: "0.0.0.0"
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge

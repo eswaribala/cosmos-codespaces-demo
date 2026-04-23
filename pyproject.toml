@@ -1,0 +1,29 @@
+[project]
+name = "cosmos-db"
+version = "0.1.0"
+description = "cosmos db design"
+authors = [
+    { name = "Paramswari", email = "parameswaribala@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [   
+    "azure-cosmos",
+    "psycopg"
+   
+]
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "isort>=5.0.0"
+]
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+[tool.isort]
+profile = "black"

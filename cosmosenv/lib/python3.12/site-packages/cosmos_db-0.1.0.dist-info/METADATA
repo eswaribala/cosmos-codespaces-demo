@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: cosmos-db
+Version: 0.1.0
+Summary: cosmos db design
+Author-email: Paramswari <parameswaribala@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: azure-cosmos
+Requires-Dist: psycopg
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+
+# cosmos-codespaces-demo

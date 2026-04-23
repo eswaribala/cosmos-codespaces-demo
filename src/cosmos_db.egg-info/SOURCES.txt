@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/app.py
+src/cosmos_db.egg-info/PKG-INFO
+src/cosmos_db.egg-info/SOURCES.txt
+src/cosmos_db.egg-info/dependency_links.txt
+src/cosmos_db.egg-info/requires.txt
+src/cosmos_db.egg-info/top_level.txt
